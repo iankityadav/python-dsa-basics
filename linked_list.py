@@ -1,5 +1,3 @@
-from itertools import cycle
-from re import S
 from node import Node
 
 class LinkedList:
@@ -28,3 +26,11 @@ class LinkedList:
         while curr:
             print(curr.data,end="-> ")
             curr = curr.next
+    
+    def size(self):
+        count = 0
+        curr = self.head
+        while curr:
+            count+=1
+            curr = curr.next
+        return count
